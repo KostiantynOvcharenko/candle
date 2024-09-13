@@ -68,7 +68,31 @@
 			height: 415px;
 		}
 	}
-
+	.aboutus {
+		.container{
+			column-gap: 22px;
+		}
+		height: 537px;
+		.aboutus__left {
+			padding: 78px 0 0;
+			flex: 0 0 299px;
+			.aboutus__tite {
+				margin: 0 0 15px 0;
+			}
+		}
+		.aboutus__right::before {
+			bottom: -63px;
+		}
+		.aboutus__right::after {
+			bottom: -51px;
+		}
+		.aboutus__right {
+			// height: 377px;
+			gap: 21px;
+		}
+	
+	}
+	
 }
 
 
@@ -168,9 +192,52 @@
 			height: 415px;
 		}
 	}
-
+	.aboutus {
+		height: 364px;
+		.container{
+			column-gap: 49px;
+		}
+		.aboutus__left {
+			padding: 2px 0 0;
+			flex: 0 0 199px;
+			.aboutus__tite {
+				margin: 0 0 20px 0;
+			}
+			.aboutus__text{
+				line-height: normal;
+			}
+		}
+		.aboutus__right::before {
+			bottom: -32px;
+		}
+		.aboutus__right::after {
+			bottom: -19px;
+		}
+		.aboutus__right {
+			height: 204px;
+			gap: 10px;
+		}
+		&__img-label{
+			font-size: 6px;
+		}
+		.aboutus__right {
+			gap: 10px;
+		}
+		&__img:nth-child(1) &__image{
+			width: 120px;
+			height: 120px;
+		}
+		&__img:nth-child(2)  &__image{
+			width: 191px;
+			height: 195px;
+		}
+		&__img:nth-child(3)  &__image{
+			width: 121px;
+			height: 120px;
+		}
+	}
+	
 }
-
 
 @media(max-width: 767.98px){
 
@@ -277,6 +344,51 @@
 		}
 
 	}
+	.aboutus {
+		height: 313px;
+		.container{
+			column-gap: 17px;
+		}
+		.aboutus__left {
+			flex: 0 0 172px;
+			padding: 0px;
+			.aboutus__tite {
+				margin: 0 0 20px 0;
+			}
+			.aboutus__text {
+				line-height: normal;
+			}		}
+		&__img-label{
+			display: none;
+		}
+		.aboutus__right::before {
+			bottom: -64px;
+		}
+		.aboutus__right::after {
+			bottom: -50px;
+		}		
+		.aboutus__right {
+			height: 140px;
+			margin-top: 26px;
+			gap: 5px;
+			align-items: flex-end;
+		}
+		&__img:nth-child(1) &__image{
+			width: 88px;
+			height: 80px;
+		}
+		&__image{
+			margin: 0;
+		}
+		&__img:nth-child(2)  &__image{
+			width: 140px;
+			height: 140px;
+		}
+		&__img:nth-child(3)  &__image{
+			width: 80px;
+			height: 80px;
+		}
+	}
 
 }
 
@@ -285,7 +397,7 @@
 @media(max-width: 479.98px){
 	.container{
 		max-width: 360px;
-		padding: 2px 10px 0;
+		padding: 0;
 	}
 	.atmosphere, .aboutus, .stage{
 		min-width: 360px;
@@ -317,6 +429,42 @@
 			display: block;
 		}
 
+	}
+	.aboutus {
+		padding-top: 25px;
+		height: 172px;
+		.container{
+			column-gap: 25px;
+		}
+		.aboutus__left {
+			flex: 0 0 234px;
+			.aboutus__tite{
+				font-size: 15px;
+				margin: 0 0 10px 0;
+			}
+			.aboutus__text{
+				font-size: 8px;
+			}
+		}
+		.aboutus__right::before {
+			bottom: -44px;
+		}
+		.aboutus__right::after {
+			bottom: -32px;
+		}		
+		.aboutus__right {
+			height: 80px;
+			margin-top: 14px;
+			display: block;
+		}
+		&__img:nth-child(1) &__image{
+			width: 80px;
+			height: 80px;
+		}
+		&__img:nth-child(2)  &__image,
+		&__img:nth-child(3)  &__image{
+			display: none;
+		}
 	}
 
 }
