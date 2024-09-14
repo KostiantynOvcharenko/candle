@@ -237,22 +237,22 @@ h1,h2,h3,h4,label{
 	}
 }
 .our-goods {
-	padding-top: 146px;
+	padding-top: 150px;
+	overflow: hidden;
 	.container{
-		// @extend %brd;
 		display: flex;
 		column-gap: 20px;
 	}
 	.our-goods__left {
-		flex: 372px 0 0;
+		padding-top: 1px;
+		flex: 0 0 370px;
 		.our-goods__title {
-			margin: 0 0 15px 0;
+			margin: 0 0 17px 0;
 		}
 		.our-goods__text {
 		}
 	}
 	.our-goods__right{
-		// @extend %brd;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
@@ -263,6 +263,17 @@ h1,h2,h3,h4,label{
 		padding-bottom: 70px;
 		position: relative;
 	}
+	.our-goods__right::before{
+		@extend %minicandle;
+		content: url(../img/icons/candle.png);
+		bottom: -12px;
+		left: -19px;
+	}
+	.our-goods__right::after{
+		@extend %underline;
+		bottom: 0px;
+		left: 4px;
+	}
 	.our-goods__item {
 		height: 500px;
 		width: 290px;
@@ -271,8 +282,13 @@ h1,h2,h3,h4,label{
 		grid-template-rows: 310px 1fr 52px;
 		grid-template-columns: 1fr;
 		justify-items: center;
-		.our-goods__img {
-			// margin: 0 0 9px 0;
+		.our-goods__img{
+			width: 274px;
+			height: 310px;
+			position: relative;
+		}
+		.our-goods__img img{
+			@extend %abs-img;
 		}
 		.our-goods__content{
 			display: flex;
@@ -302,11 +318,6 @@ h1,h2,h3,h4,label{
 		.our-goods__button {
 		}
 	}
-	.our-goods__underline::before{
-	}
-	.our-goods__underline{
-	}
-	
 }
 
 
