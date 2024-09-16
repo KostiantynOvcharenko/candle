@@ -52,7 +52,6 @@ h1,h2,h3,h4,label{
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 31px;
 	position: relative;
 	.header__logo {
 		height: 70px;
@@ -143,13 +142,16 @@ h1,h2,h3,h4,label{
 // // 	overflow-x: clip;
 // }
 .atmosphere, .aboutus, .stage{
-	min-width: 1440px;
+	overflow: hidden;
+	// min-width: 1440px;
 }
 
 .atmosphere {
 	position: relative;
+	padding-top: 46px;
+	height: 852px;
 	.atmosphere__left {
-		padding: 167px 0 419px;
+		padding-top: 152px;
 		width: 380px;
 		.atmosphere__title {
 			margin: 0 0 16px 0;
@@ -158,10 +160,13 @@ h1,h2,h3,h4,label{
 			// line-height: 15px;
 			margin: 0 0 48px 0;
 		}
+		.atmosphere__btn{
+			@extend %flex-center;
+		}
 	}
 	.atmosphere__img{
 		position: absolute;
-		top: 10px;
+		top: 36px;
 		right: 4px;
 		width: 1069px;
 		height: 669px;
@@ -178,6 +183,7 @@ h1,h2,h3,h4,label{
 .aboutus {
 	background: #A5978E;
 	padding-top: 50px;
+	height: 535px;
 	overflow: hidden;
 	.container{
 		margin: 0 auto;
@@ -188,7 +194,7 @@ h1,h2,h3,h4,label{
 	}
 	.aboutus__left {
 		flex: 0 0 372px;
-		padding: 78px 0 184px;
+		padding: 79px 0 0;
 		.aboutus__tite {
 			margin: 0 0 15px 0;
 		}
@@ -202,7 +208,7 @@ h1,h2,h3,h4,label{
 	}
 	.aboutus__right::after {
 		@extend %underline;
-		bottom: -47px;
+		bottom: -49px;
 	}
 	.aboutus__right {
 		position: relative;
@@ -258,10 +264,10 @@ h1,h2,h3,h4,label{
 		justify-content: space-between;
 		padding: 0 48px 0 49px;
 		row-gap: 50px;
-		margin: 0 0 70px 0;
 		flex: 0 0 770px;
 		padding-bottom: 70px;
 		position: relative;
+		margin-bottom: 10px;
 	}
 	.our-goods__right::before{
 		@extend %minicandle;
@@ -271,8 +277,8 @@ h1,h2,h3,h4,label{
 	}
 	.our-goods__right::after{
 		@extend %underline;
-		bottom: 0px;
-		left: 4px;
+		bottom: -1px;
+		left: 2px;
 	}
 	.our-goods__item {
 		height: 500px;
@@ -316,82 +322,91 @@ h1,h2,h3,h4,label{
 			// margin: 0 0 27px 0;
 		}
 		.our-goods__button {
+			@extend %flex-center;
 		}
 	}
 }
 
 
-// .stage {
-// 	padding-top: 103px;
-// 	display: grid;
-// 	grid-template-columns: 370px 1fr;
-// 	grid-template-rows: 1fr 59px;
-// 	justify-content: start;
-// 	column-gap: 22px;
-// 	.stage__left {
-// 		padding-top: -2px;
-// 		grid-area: 1 / 1 / 3 / 2;
-// 		.stage__title {
-// 			margin: 0 0 16px 0;
-// 		}
-// 		.stage__text {
-// 		}
-// 	}
-// 	.stage__right {
-// 		grid-area: 1 / 2 / 2 / 3;
-// 	}
-// 	.goods {
-// 		display: grid;
-// 		grid-template-columns: repeat(2, 1fr);
-// 		column-gap: 20px;
-// 		row-gap: 70px;
-// 		margin: 0 0 69px 0;
-// 		.goods__item {
-// 			display: grid;
-// 			grid-template: 1fr 30px / repeat(2, 1fr);
-// 			column-gap: 42px;
-// 			// justify-content: space-between;
-// 		}
-// 		.goods__text {
-// 			width: 172px;
-// 			line-height: 16px;
-// 		}
-// 		.goods__img {
-// 			grid-area: 1 / 2 / 3 / 3;
-// 		}
-// 		.goods__figue {
-// 			font-family: "Yeseva One", serif;
-// 			font-size: 30px;
-// 			color: #BEA495;
-// 			align-self:self-end
-// 		}
-// 		.goods__item--right {
-// 			.goods__img {
-// 				grid-area: 1 / 1 / 3 / 2;
-// 				order: 1;
-// 			}
-// 			.goods__text {
-// 				order: 2;
-// 			}
-// 			.goods__figue {
-// 				justify-self: right;
-// 				order: 3;
-// 			}
-// 		}
-// 	}
-// 	.stage__underline::before{
-// 		content: url(img/icons/candle.png);
-// 		display: block;
-// 		margin: -20px 0 0 -20px;
-		
-// 	}
-// 	.stage__underline{
-// 		grid-area: 2 / 2 / 3 / 3;
-// 		width: 100%;
-// 		bottom: 59px;
-// 		border-top: #7B6152 2px solid;
-// 	}
-// }
+.stage { // srage
+	padding-top: 151px;
+	display: flex;
+	justify-content: flex-start;
+	column-gap: 22px;
+	.stage__left {
+		flex: 0 0 370px;
+		padding-top: -2px;
+		.stage__title {
+			margin: 0 0 17px 0;
+		}
+		.stage__text {
+			padding-left: 1px;
+		}
+	}
+	.stage__right {
+		position: relative;
+	}
+	.stage__right::before{
+		@extend %minicandle;
+		content: url(../img/icons/candle.png);
+		bottom: -80px;
+		left: -19px;
+	}
+	.stage__right::after{
+		@extend %underline;
+		bottom: -68px;
+		left: 0px;
+	}	
+	.goods {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 20px;
+		row-gap: 72px;
+		margin: 0 0 80px 0;
+		.goods__item {
+			display: flex;
+			justify-content: space-between;
+			column-gap: 42px;
+		}
+		.goods__texts {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+		.goods__text {
+			width: 172px;
+			line-height: 16px;
+		}
+		.goods__figue {
+			font-family: "Yeseva One", serif;
+			font-size: 30px;
+			color: #BEA495;
+		}
+		.goods__img {
+			position: relative;
+			width: 159px;
+			height: 221px;
+		}
+		.goods__img img{
+			@extend %abs-img;
+		}
+		.goods__item:nth-child(4n+4),
+		.goods__item:nth-child(4n+3){
+			.goods__img {
+				order: 1;
+			}
+			.goods__texts {
+				order: 2;
+				margin-left: -8px;
+				.goods__figue {
+					align-self: flex-end;				
+				}
+			}
+		}
+	}
+
+} // - stage
 
 
 // .courses {
